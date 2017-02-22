@@ -1,2 +1,2 @@
-# nosql
-Technologie nosql
+# Projekt z przedmiotu Technologie nosql
+

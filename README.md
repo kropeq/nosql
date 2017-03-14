@@ -64,3 +64,26 @@ Schema -- przygotować i użyć w trakcie importu danych.(TODO)
 ## MongoDB
 
 Formaty DateTime i liczb powinny być poprawnie zaimportowane.(TODO)
+
+### Zadanie 1
+
+Dane: _[Pobierz](https://archive.org/download/stackexchange/gamedev.stackexchange.com.7z)_ (Game Development Posts)
+
+Plik: _Posts.xml_
+
+##### Wstawiamy plik _Posts.xml_ do wspólnego folderu z plikiem _xml_to_csv.class_ i z linii poleceń uruchamiamy konwersję:
+
+```java -cp źródło\pliku xml_to_csv```
+
+#### W wyniku otrzymujemy plik posts.csv, który zawiera "oszczyszczone" dane, a także okrojoną liczbę kolumn. Kolumny to kolejno:
+
+|Id|ViewCount|CreationData|Body|Title|Tags|AnswerCount|CommentCount|
+|---|--------|------------|----|-----|----|-----------|------------|
+
+#### Tworzenie bazy danych w MongoDB:
+
+```use baza```
+
+#### Import danych z przygotowanego pliku CSV
+
+```mongoimport -d baza -c posts --type csv --file C:\folder\posts.csv --headerline```

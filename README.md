@@ -87,3 +87,15 @@ Plik: _Posts.xml_
 #### Import danych z przygotowanego pliku CSV
 
 ```mongoimport -d baza -c posts --type csv --file C:\folder\posts.csv --headerline```
+
+##### Liczba importowanych danych
+
+```94185```
+
+#### Komenda pomiaru czasu
+
+```powershell "Measure-Command{mongoimport -d baza -c posts --type csv --file C:\folder\posts.csv --headerline}"```
+
+#### Czas importu
+
+```Total seconds : 13,1237809```

@@ -61,6 +61,50 @@ Policzyć czas ile to zajęło.
 
 Schema -- przygotować i użyć w trakcie importu danych.(TODO) 
 
+#### Łączenie się z postgresem
+
+```psql -U postgres -h localhost```
+
+#### Tworzenie bazy danych baza
+
+```CREATE database baza```
+
+#### Łączenie z bazą danych
+
+```\c baza```
+
+#### Tworzenie schematu
+
+```CREATE SCHEMA schema```
+
+#### Tworzenie tabeli posts
+
+```CREATE TABLE schema.posts( Id integer, ViewCount integer, CreationDate date, Body varchar, Title varchar, Tags varchar, AnswerCount integer, CommentCount integer)```
+
+#### Import danych
+
+```\copy schema.posts FROM 'C:/Users/MINIO/Desktop/TEST/posts.csv' DELIMITER ';' CSV HEADER```
+
+#### Liczba danych
+
+```SELECT COUNT(*) FROM schema.posts```
+
+#### Liczba danych
+
+```94185```
+
+#### Pomiar czasowy importowania
+
+```\timing \copy schema.posts FROM 'C:/Users/MINIO/Desktop/TEST/posts.csv' DELIMITER ';' CSV HEADER```
+
+#### Czas (TODO - zmierzone na innym sprzęcie) 
+
+```19,856968s```
+
+
+
+
+
 ## MongoDB
 
 Formaty DateTime i liczb powinny być poprawnie zaimportowane.(TODO)

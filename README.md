@@ -87,7 +87,7 @@ Schema -- przygotować i użyć w trakcie importu danych.(TODO)
 
 #### Czas tworzenia schematu
 
-```0,000694s
+```0,000694s```
 
 #### Tworzenie tabeli posts
 

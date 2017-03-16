@@ -65,9 +65,17 @@ Schema -- przygotować i użyć w trakcie importu danych.(TODO)
 
 ```psql -U postgres -h localhost```
 
+#### Uruchomienie pomiarów czasowych
+
+```\timing```
+
 #### Tworzenie bazy danych baza
 
 ```CREATE database baza```
+
+#### Czas tworzenia bazy
+
+```5,533938s```
 
 #### Łączenie z bazą danych
 
@@ -77,13 +85,25 @@ Schema -- przygotować i użyć w trakcie importu danych.(TODO)
 
 ```CREATE SCHEMA schema```
 
+#### Czas tworzenia schematu
+
+```0,000694s
+
 #### Tworzenie tabeli posts
 
 ```CREATE TABLE schema.posts( Id integer, ViewCount integer, CreationDate date, Body varchar, Title varchar, Tags varchar, AnswerCount integer, CommentCount integer)```
 
+#### Czas tworzenia tabeli
+
+```0,214664s```
+
 #### Import danych
 
 ```\copy schema.posts FROM 'C:/Users/MINIO/Desktop/TEST/posts.csv' DELIMITER ';' CSV HEADER```
+
+#### Czas importowania
+
+```10,092721s```
 
 #### Liczba danych
 
@@ -93,13 +113,11 @@ Schema -- przygotować i użyć w trakcie importu danych.(TODO)
 
 ```94185```
 
-#### Pomiar czasowy importowania
+#### Czas zliczania rekordów tabeli
 
-```\timing \copy schema.posts FROM 'C:/Users/MINIO/Desktop/TEST/posts.csv' DELIMITER ';' CSV HEADER```
+```0,089496s```
 
-#### Czas (TODO - zmierzone na innym sprzęcie) 
 
-```19,856968s```
 
 
 

@@ -137,6 +137,19 @@ Dane: _[Pobierz](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&expo
 
 Plik: _training.1600000.processed.noemoticon.csv_
 
+##### Wstawiamy plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _edycja_csv.class_ i z linii poleceń uruchamiamy konwersję:
+
+```java -cp źródło\pliku edycja_csv```
+
+#### W wyniku otrzymujemy plik tweets.csv, który zawiera "oszczyszczone" dane, okrojoną liczbę kolumn i dodaną geolokalizację. Kolumny to kolejno:
+
+|Id|CreationData|Username|Tweet|Latitude|Longitude|
+|---|-----------|--------|-----|--------|---------|
+
+#### Łączenie się z postgresem
+
+```psql -U postgres -h localhost```
+
 #### Uruchomienie pomiarów czasowych
 
 ```\timing```

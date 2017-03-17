@@ -260,18 +260,48 @@ Plik: _Posts.xml_
 
 ```use baza```
 
-#### Import danych z przygotowanego pliku CSV
-
-```mongoimport -d baza -c posts --type csv --file C:\folder\posts.csv --headerline```
-
-##### Liczba importowanych danych
-
-```94185```
-
-#### Komenda pomiaru czasu
+#### Import danych z przygotowanego pliku CSV z pomiarem czasu
 
 ```powershell "Measure-Command{mongoimport -d baza -c posts --type csv --file C:\folder\posts.csv --headerline}"```
 
 #### Czas importu
 
 ```Total seconds : 13,1237809```
+
+##### Liczba zaimportowanych danych
+
+```94185```
+
+
+
+
+### Zadanie 2 ( EDA )
+
+Dane: _[Pobierz](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&export=download)_ (Twitter Data For Sentiment Analysis)
+
+Plik: _training.1600000.processed.noemoticon.csv_
+
+##### Wstawiamy plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _edycja_csv.class_ i z linii poleceń uruchamiamy konwersję:
+
+```java -cp źródło\pliku edycja_csv```
+
+#### W wyniku otrzymujemy plik tweets.csv, który zawiera "oszczyszczone" dane, okrojoną liczbę kolumn i dodaną geolokalizację. Kolumny to kolejno:
+
+|Id|CreationData|Username|Tweet|Latitude|Longitude|
+|---|-----------|--------|-----|--------|---------|
+
+#### Tworzenie bazy danych w MongoDB:
+
+```use baza```
+
+#### Import danych z przygotowanego pliku CSV z pomiarem czasu
+
+```powershell "Measure-Command{mongoimport -d baza -c tweets --type csv --file C:\folder\tweets.csv --headerline}"```
+
+#### Czas importu
+
+```Total seconds : 73,2462208```
+
+##### Liczba zaimportowanych danych
+
+```1 600 000```

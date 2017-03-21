@@ -20,7 +20,7 @@ Wielkość zbioru: **_1 600 000 tweetów_**
 |Moc rdzenia|2.66GHz|
 |Pamięć RAM|4GB(3.25GB dostępne)|
 
-### Przedstawienie dancyh
+### Przedstawienie danych
 
 Przykładowy rekord( TODO ):
 
@@ -45,7 +45,7 @@ Przykład zapytania w PostgreSQL( 5 najaktywniejszych użytkowników ):
 
 ### Czyszczenie danych
 
-Plik zawierający dane nie zawierał nagłówków, a opis poszczególnych kolumn znajdował się na stronie, z której został pobrany zbiór. Postanowiłem usunąć kolumnę pierwszą, zawierającą liczby(0,2 lub 4) oznaczającą ocenę tweeta( 0 - negatywny, 2 - neutralny, 4 - pozytywny), a także kolumnę 4-tą, zawierającą zapytania do postów. Ponieważ wszystkie we wszystkisch rekordach było to samo "NO_QUERY", postanowiłem pozbyć się tej kolumny. Dodatkowo postanowiłem o dodaniu lokalizacji tych tweetów wprowadzając listę współrzędnych 31 miejscowości USA i losując( programistycznie ) do każdego tweeta jedną z nich.
+[Plik](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&export=download) zawierający dane nie zawierał nagłówków, a opis poszczególnych kolumn znajdował się na [stronie](http://help.sentiment140.com/for-students/), z której został pobrany zbiór. Postanowiłem usunąć kolumnę pierwszą, zawierającą liczby(0,2 lub 4) oznaczającą ocenę tweeta( 0 - negatywny, 2 - neutralny, 4 - pozytywny), a także kolumnę 4-tą, zawierającą zapytania do postów. Ponieważ we wszystkisch rekordach była ta sama wartość "NO_QUERY", postanowiłem pozbyć się tej kolumny. Dodatkowo postanowiłem o dodaniu lokalizacji tych tweetów wprowadzając listę współrzędnych 31 miejscowości USA i losując( programistycznie ) do każdego tweeta jedną z nich.
 
 
 ## PostgreSQL

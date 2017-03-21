@@ -26,36 +26,27 @@ Przykładowy rekord( TODO ):
 
 ``` json
 {
-	"pole1": "wartosc1",
-	"pole2": "wartosc2"
+	"id": "1467812416",
+	"CreationData": "Mon Apr 06 22:20:16 PDT 2009",
+	"Username": "erinx3leannexo",
+	"Tweet": "spring break in plain city... it's snowing ",
+	"Latitude": "36.1749700",
+	"Latitude": "-115.1372200"
 }
 ```
 
 ### Przykładowe zapytania
 
-Jakich informacji szukam? Przykłady wpisywanych zapytań.(TODO)
+Informacje, których będę szukał to np. najaktywniejsi użytkownicy, miejsca, z których zostało wysłanych najwięcej tweetów czy statystyka miesięczna( zbiór zawiera tweety z 3 miesięcy 2009 roku ).
 
-### Mapka
+Przykład zapytania w PostgreSQL( 5 najaktywniejszych użytkowników ):
 
-Zapytanie mapkowe w celu określania lokalizacji jakichś obiektów.(TODO)
-
-curl localhost:9200/... | jq.hits.hits[] | przerabiamy na GEOJsona za pomocą programu wyszukanego w internecie, np TopoJSON.
-
-Wynik umieszczamy na mapce.
+```SELECT username, COUNT(*) AS tweets FROM schema.tweets GROUP BY username ORDER BY tweets DESC LIMIT 5```
 
 ### Czyszczenie danych
 
-Zmiana nazwy pól, jakie pola i dlaczego wybrano te.(TODO)
+Plik zawierający dane nie zawierał nagłówków, a opis poszczególnych kolumn znajdował się na stronie, z której został pobrany zbiór. Postanowiłem usunąć kolumnę pierwszą, zawierającą liczby(0,2 lub 4) oznaczającą ocenę tweeta( 0 - negatywny, 2 - neutralny, 4 - pozytywny), a także kolumnę 4-tą, zawierającą zapytania do postów. Ponieważ wszystkie we wszystkisch rekordach było to samo "NO_QUERY", postanowiłem pozbyć się tej kolumny. Dodatkowo postanowiłem o dodaniu lokalizacji tych tweetów wprowadzając listę współrzędnych 31 miejscowości USA i losując( programistycznie ) do każdego tweeta jedną z nich.
 
-## Elasticsearch
-
-Mapping - przygotowac i zapisać(TODO)
-
-Import danych:
-
-sh gunzip -c dane.json.gz | ... #całość | #próbka / sample
-
-Policzyć czas ile to zajęło.
 
 ## PostgreSQL
 
@@ -273,8 +264,6 @@ Plik: _Posts.xml_
 ```94185```
 
 
-
-
 ### Zadanie 2 ( EDA )
 
 Dane: _[Pobierz](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&export=download)_ (Twitter Data For Sentiment Analysis)
@@ -305,3 +294,28 @@ Plik: _training.1600000.processed.noemoticon.csv_
 ##### Liczba zaimportowanych danych
 
 ```1 600 000```
+
+
+### Mapka
+
+##### Wstawiamy wcześniej przygotowany plik( w zadaniu 2 EDA ) _tweets.csv_ do wspólnego folderu z plikiem csv_to_geojson.class_ i z linii poleceń uruchamiamy konwersję:
+
+```java -cp źródło\pliku csv_to_geojson```
+
+W wyniku otrzymujemy plik tweets.geojson, który zawiera przygotowane dane w formacie GeoJSON.
+
+Mapa zawiera miejsca, z których wysyłane były tweety( nazwa kraju( USA ) i miasta ) oraz zliczoną liczbę tweetów wysłanych z tego miejsca.
+
+[Zobacz mapkę](https://github.com/kropeq/nosql/blob/master/tweets.geojson)
+
+Zapytanie mapkowe w celu określania lokalizacji jakichś obiektów.(TODO)
+
+## Elasticsearch
+
+Mapping - przygotowac i zapisać(TODO)
+
+Import danych:
+
+sh gunzip -c dane.json.gz | ... #całość | #próbka / sample
+
+Policzyć czas ile to zajęło.

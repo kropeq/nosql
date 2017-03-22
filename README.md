@@ -31,9 +31,18 @@ Przykładowy rekord( TODO ):
 	"Username": "erinx3leannexo",
 	"Tweet": "spring break in plain city... it's snowing ",
 	"Latitude": "36.1749700",
-	"Latitude": "-115.1372200"
+	"Longitude": "-115.1372200"
 }
 ```
+
+#### Wyjaśnienie pól
+
+* id - numer id tweeta
+* CreationData - data udostępnienia tweeta
+* Username - nazwa użytkownika tweeta
+* Tweet - tekst tweeeta
+* Latitude - szerokość geograficzna
+* Longitude - długość geograficzna
 
 ### Przykładowe zapytania
 

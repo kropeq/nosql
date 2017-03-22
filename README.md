@@ -308,6 +308,8 @@ Mapa zawiera miejsca, z których wysyłane były tweety( nazwa kraju( USA ) i mi
 
 [Zobacz mapkę](https://github.com/kropeq/nosql/blob/master/tweets.geojson)
 
+![alt tag](https://github.com/kropeq/nosql/blob/master/screens/mapka_geojson.png)
+
 Zapytanie mapkowe w celu określania lokalizacji jakichś obiektów.(TODO)
 
 ## Elasticsearch

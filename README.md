@@ -6,6 +6,8 @@ Nazwa zbioru: **_Twitter Data For Sentiment Analysis_**
 
 Wielkość zbioru: **_1 600 000 tweetów_**
 
+Rozmiar zbioru: **_233 207KB_**
+
 Źródło danych: **_[kliknij mnie!](http://help.sentiment140.com/for-students/)_**
 
 

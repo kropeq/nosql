@@ -24,10 +24,11 @@ Rozmiar zbioru: **_233 207KB_**
 
 ### Przedstawienie danych
 
-Przykładowy rekord( TODO ):
+Przykładowy rekord:
 
 ``` json
 {
+	"Rating": "0",
 	"id": "1467812416",
 	"CreationData": "Mon Apr 06 22:20:16 PDT 2009",
 	"Username": "erinx3leannexo",
@@ -39,6 +40,7 @@ Przykładowy rekord( TODO ):
 
 #### Wyjaśnienie pól
 
+* Rating - ocena tweeta( 0 - negaytwna, 4 - pozytywna )
 * id - numer id tweeta
 * CreationData - data udostępnienia tweeta
 * Username - nazwa użytkownika tweeta
@@ -56,7 +58,7 @@ Przykład zapytania w PostgreSQL( 5 najaktywniejszych użytkowników ):
 
 ### Czyszczenie danych
 
-[Plik](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&export=download) zawierający dane nie zawierał nagłówków, a opis poszczególnych kolumn znajdował się na [stronie](http://help.sentiment140.com/for-students/), z której został pobrany zbiór. Postanowiłem usunąć kolumnę pierwszą, zawierającą liczby(0,2 lub 4) oznaczającą ocenę tweeta( 0 - negatywny, 2 - neutralny, 4 - pozytywny), a także kolumnę 4-tą, zawierającą zapytania do postów. Ponieważ we wszystkisch rekordach była ta sama wartość "NO_QUERY", postanowiłem pozbyć się tej kolumny. Dodatkowo postanowiłem o dodaniu lokalizacji tych tweetów wprowadzając listę współrzędnych 31 miejscowości USA i losując( programistycznie ) do każdego tweeta jedną z nich.
+[Plik](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&export=download) zawierający dane nie zawierał nagłówków, a opis poszczególnych kolumn znajdował się na [stronie](http://help.sentiment140.com/for-students/), z której został pobrany zbiór. Postanowiłem usunąć kolumnę 4-tą zawierającą zapytania do postów, ponieważ we wszystkisch rekordach była ta sama wartość "NO_QUERY", która nic nie wnosiła do danych. Dodatkowo postanowiłem o dodaniu lokalizacji tych tweetów wprowadzając listę współrzędnych 31 miejscowości USA i losując( programistycznie ) do każdego tweeta jedną z nich.
 
 
 ## PostgreSQL
@@ -183,12 +185,20 @@ Plik: _training.1600000.processed.noemoticon.csv_
 |April|100025|
 
 
+## Elasticsearch
+
+Mapping - przygotowac i zapisać(TODO)
+
+Import danych:
+
+sh gunzip -c dane.json.gz | ... #całość | #próbka / sample
+
+Policzyć czas ile to zajęło.
+
+
 ## MongoDB
 
 Formaty DateTime i liczb powinny być poprawnie zaimportowane.(TODO)
-
-
-
 
 ### Zadanie 2 ( EDA )
 
@@ -237,16 +247,6 @@ Mapa zawiera miejsca, z których wysyłane były tweety( nazwa kraju( USA ) i mi
 ![alt tag](https://github.com/kropeq/nosql/blob/master/screens/mapka_geojson.png)
 
 Zapytanie mapkowe w celu określania lokalizacji jakichś obiektów.(TODO)
-
-## Elasticsearch
-
-Mapping - przygotowac i zapisać(TODO)
-
-Import danych:
-
-sh gunzip -c dane.json.gz | ... #całość | #próbka / sample
-
-Policzyć czas ile to zajęło.
 
 
 

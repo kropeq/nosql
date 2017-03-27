@@ -189,11 +189,19 @@ Plik: _training.1600000.processed.noemoticon.csv_
 
 Mapping - przygotowac i zapisać(TODO)
 
-Import danych:
+#### Utworzenie bazy tweets i ustawienie mappingu
 
-sh gunzip -c dane.json.gz | ... #całość | #próbka / sample
+curl -XPUT localhost:9200/tweets --data-binary @tweets.mappings
 
-Policzyć czas ile to zajęło.
+#### Import pliku z danymi
+
+curl -XPOST localhost:9200/tweets/tweet/_bulk --data-binary @tweets.json
+
+#### Zliczenie zaimportowanych danych
+
+curl localhost:9200/tweets/tweet/_count
+
+
 
 
 ## MongoDB

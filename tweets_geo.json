@@ -1,0 +1,62 @@
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "1" } }
+{ "Country": "United States of America", "City": "Las Vegas" , "Tweets": "51607",  "Location": [-115.1372200,36.1749700]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "2" } }
+{ "Country": "United States of America", "City": "New York" , "Tweets": "51846",  "Location": [-74.0059700,40.7142700]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "3" } }
+{ "Country": "United States of America", "City": "Dallas" , "Tweets": "51438",  "Location": [-96.8066700,32.7830600]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "4" } }
+{ "Country": "United States of America", "City": "New Orleans" , "Tweets": "52006",  "Location": [-90.0750700,29.9546500]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "5" } }
+{ "Country": "United States of America", "City": "Orlando" , "Tweets": "51714",  "Location": [-81.3792400,28.5383400]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "6" } }
+{ "Country": "United States of America", "City": "Washington" , "Tweets": "51227",  "Location": [-77.0363700,38.8951100]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "7" } }
+{ "Country": "United States of America", "City": "Houston" , "Tweets": "51733",  "Location": [-95.3632700,29.7632800]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "8" } }
+{ "Country": "United States of America", "City": "Chicago" , "Tweets": "51674",  "Location": [-87.6500500,41.8500300]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "9" } }
+{ "Country": "United States of America", "City": "Seattle" , "Tweets": "51100",  "Location": [-122.3320700,47.6062100]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "10" } }
+{ "Country": "United States of America", "City": "Detroit" , "Tweets": "51389",  "Location": [-83.0457500,42.3314300]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "11" } }
+{ "Country": "United States of America", "City": "Baltimore" , "Tweets": "51993",  "Location": [-76.6121900,39.2903800]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "12" } }
+{ "Country": "United States of America", "City": "Charleston" , "Tweets": "51642",  "Location": [-79.9309200,32.7765700]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "13" } }
+{ "Country": "United States of America", "City": "New Haven" , "Tweets": "51579",  "Location": [-72.9281600,41.3081500]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "14" } }
+{ "Country": "United States of America", "City": "Boston" , "Tweets": "51607",  "Location": [-71.0597700,42.3584300]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "15" } }
+{ "Country": "United States of America", "City": "San Antonio" , "Tweets": "51390",  "Location": [-98.4936300,29.4241200]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "16" } }
+{ "Country": "United States of America", "City": "Salt Lake City" , "Tweets": "51540",  "Location": [-111.8910500,40.7607800]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "17" } }
+{ "Country": "United States of America", "City": "Indianapolis" , "Tweets": "51913",  "Location": [-86.1580400,39.7683800]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "18" } }
+{ "Country": "United States of America", "City": "San Francisco" , "Tweets": "51932",  "Location": [-122.4194200,37.7749300]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "19" } }
+{ "Country": "United States of America", "City": "Portland" , "Tweets": "51850",  "Location": [-122.6762100,45.5234500]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "20" } }
+{ "Country": "United States of America", "City": "Birmingham" , "Tweets": "51485",  "Location": [-86.8024900,33.5206600]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "21" } }
+{ "Country": "United States of America", "City": "Los Angeles" , "Tweets": "51722",  "Location": [-118.2436800,34.0522300]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "22" } }
+{ "Country": "United States of America", "City": "San Diego" , "Tweets": "51860",  "Location": [-117.1572600,32.7153300]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "23" } }
+{ "Country": "United States of America", "City": "Phoenix" , "Tweets": "51641",  "Location": [-112.0740400,33.4483800]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "24" } }
+{ "Country": "United States of America", "City": "Philadelphia" , "Tweets": "51916",  "Location": [-75.1637900,39.9523300]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "25" } }
+{ "Country": "United States of America", "City": "San Jose" , "Tweets": "51519",  "Location": [-121.8949600,37.3393900]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "26" } }
+{ "Country": "United States of America", "City": "Miami" , "Tweets": "51456",  "Location": [-80.1936600,25.7742700]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "27" } }
+{ "Country": "United States of America", "City": "Oklahoma City" , "Tweets": "51201",  "Location": [-97.5164300,35.4675600]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "28" } }
+{ "Country": "United States of America", "City": "Denver" , "Tweets": "51433",  "Location": [-104.9847000,39.7391500]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "29" } }
+{ "Country": "United States of America", "City": "Oakland" , "Tweets": "51518",  "Location": [-122.2708000,37.8043700]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "30" } }
+{ "Country": "United States of America", "City": "Cleveland" , "Tweets": "51544",  "Location": [-81.6954100,41.4995000]}
+{ "index" : { "_index" : "geo", "_type" : "cities", "_id" : "31" } }
+{ "Country": "United States of America", "City": "Austin" , "Tweets": "51524",  "Location": [-97.7430600,30.2671500]}

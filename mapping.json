@@ -1,0 +1,12 @@
+{
+  	"tweet": {
+		"properties": {
+			"Rating": { "type": "long" },
+			"id": { "type": "long" },
+			"CreationData": { "type": "date" },
+			"Username": { "type": "text"},
+			"Tweet": { "type": "text" },
+			"Location": { "type":"geo_point" }
+		}
+	}
+}

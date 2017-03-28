@@ -3,7 +3,7 @@
 		"properties": {
 			"Rating": { "type": "long" },
 			"id": { "type": "long" },
-			"CreationData": { "type": "date" },
+			"CreationData": { "type": "date", "format": "EEE MMM dd HH:mm:ss z yyyy" },
 			"Username": { "type": "text"},
 			"Tweet": { "type": "text" },
 			"Location": { "type":"geo_point" }

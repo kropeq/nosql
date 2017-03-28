@@ -1,0 +1,15 @@
+{
+"query": { 
+	"bool" : { 
+		"must" : {
+			"match_all" : {} 
+			},
+		"filter" : { 
+			"geo_distance" : { 
+				"distance" : "400km", 
+				"Location": [-76.6121900,39.2903800] 
+				}
+			}
+		}
+	}
+}

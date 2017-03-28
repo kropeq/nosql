@@ -1,0 +1,10 @@
+{
+  	"cities": {
+		"properties": {
+			"Country": { "type": "text" },
+			"City": { "type": "text" },
+			"Tweets": { "type": "long" },
+			"Location": { "type":"geo_point" }
+		}
+	}
+}

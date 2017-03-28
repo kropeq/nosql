@@ -112,6 +112,40 @@ Ponieważ wybrany przeze mnie zbiór( tweety ) nie zawierał danych geolokalizac
 }
 ```
 
+#### Zapytanie 2: Miejsca tweetujących w stanie Teksas
+
+``` curl -g -X GET "http://localhost:9200/geo/cities/_search?pretty=true" --data-binary @query2.txt```
+
+#### query2.txt:
+
+```
+{
+"query": { 
+	"bool" : { 
+		"must" : {
+			"match_all" : {} 
+			},
+		"filter" : { 
+			"geo_polygon" : { 
+				"Location" : {
+					"points" : [
+						[-97.450601, 26.395055],
+						[-106.600256, 31.972835],
+						[-103.061962, 31.996343],
+						[-103.034247, 36.499653],
+						[-100.004064, 36.484799],
+						[-99.967110, 34.567728],
+						[-94.072946, 33.550980],
+						[-93.858713, 29.693271]
+					]
+				}
+			}
+		}
+	}
+}
+}
+```
+
 ## PostgreSQL
 
 ### Zadanie 1 ( EDA )

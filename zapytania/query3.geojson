@@ -1,0 +1,182 @@
+{"type":"FeatureCollection","features":[
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Boston",
+                        "Tweets" : "51607"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -71.05977,
+                                42.35843
+                        ]
+                }
+        }, 
+        {
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Philadelphia",
+                        "Tweets" : "51916"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -75.16379,
+                                39.95233
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Chicago",
+                        "Tweets" : "51674"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -87.65005,
+                                41.85003
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Detroit",
+                        "Tweets" : "51389"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -83.04575,
+                                42.33143
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Cleveland",
+                        "Tweets" : "51544"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -81.69541,
+                                41.4995
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "New York",
+                        "Tweets" : "51846"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -74.00597,
+                                40.71427
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Washington",
+                        "Tweets" : "51227"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -77.03637,
+                                38.89511
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "New Haven",
+                        "Tweets" : "51579"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -72.92816,
+                                41.30815
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Baltimore",
+                        "Tweets" : "51993"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -76.61219,
+                                39.29038
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Indianapolis",
+                        "Tweets" : "51913"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -86.15804,
+                                39.76838
+                        ]
+                }
+        }
+]}

@@ -33,8 +33,7 @@ Przykładowy rekord:
 	"CreationData": "Mon Apr 06 22:20:16 PDT 2009",
 	"Username": "erinx3leannexo",
 	"Tweet": "spring break in plain city... it's snowing ",
-	"Latitude": "36.1749700",
-	"Longitude": "-115.1372200"
+	"Location": [-115.1372200,36.1749700]
 }
 ```
 
@@ -191,6 +190,16 @@ Do pomiarów czasu wykorzystuję skrypt [timecmd.bat](http://stackoverflow.com/q
 
 Operacje będę wykorzystywał do przygotowanej próbki danych( 1000 rekordów ) w formacie json.
 
+#### Wstawiam plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _csv_to_json.class_ i z linii poleceń uruchamiam konwersję:
+
+```java -cp źródło\pliku csv_to_json```
+
+#### W wyniku otrzymuje plik tweets_small.json, który zawiera "oszczyszczone" dane, okrojoną liczbę kolumn i dodaną geolokalizację. Kolumny to kolejno:
+
+|   |Rating|Id|CreationData|Username|Tweet|Location|
+|---|------|---|-----------|--------|-----|---------|
+|Typ|long|long|date|text|text|geo_point|
+
 #### Przygotowałem mapping do mojej bazy
 
 [mapping](https://github.com/kropeq/nosql/blob/master/mapping.json)
@@ -201,7 +210,7 @@ Operacje będę wykorzystywał do przygotowanej próbki danych( 1000 rekordów )
 		"properties": {
 			"Rating": { "type": "long" },
 			"id": { "type": "long" },
-			"CreationData": { "type": "date" },
+			"CreationData": { "type": "date", "format": "EEE MMM dd HH:mm:ss z yyyy" },
 			"Username": { "type": "text"},
 			"Tweet": { "type": "text" },
 			"Location": { "type":"geo_point" }

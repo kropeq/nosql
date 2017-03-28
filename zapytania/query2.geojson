@@ -1,0 +1,74 @@
+{"type":"FeatureCollection","features":[ 
+        {
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "San Antonio",
+                        "Tweets" : "51390"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -98.49363,
+                                29.42412
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Houston",
+                        "Tweets" : "51733"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -95.36327,
+                                29.76328
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Dallas",
+                        "Tweets" : "51438"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -96.80667,
+                                32.78306
+                        ]
+                }
+        },
+	{
+                "type" : "Feature",
+                "properties" : {
+                        "marker-color" : "#0000ff",
+                        "marker-size" : "medium",
+                        "marker-symbol" : "",
+                        "Country" : "United States of America",
+                        "City" : "Austin",
+                        "Tweets" : "51524"
+                },
+                "geometry" : {
+                        "type" : "Point",
+                        "coordinates" : [
+                                -97.74306,
+                                30.26715
+                        ]
+                }
+        }
+]}

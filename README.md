@@ -146,6 +146,32 @@ Ponieważ wybrany przeze mnie zbiór( tweety ) nie zawierał danych geolokalizac
 }
 ```
 
+#### Zapytanie 3: Miejsca tweetujących północno-wschodniej części USA
+
+``` curl -g -X GET "http://localhost:9200/geo/cities/_search?pretty=true" --data-binary @query3.txt```
+
+#### query3.txt:
+
+```
+{
+"query": { 
+	"bool" : { 
+		"must" : {
+			"match_all" : {} 
+			},
+		"filter" : { 
+			"geo_bounding_box" : {
+				"Location" : {
+					"top_left": [-89.635546,43.709397],
+					"bottom_right": [-68.992815,37.445628]
+				}
+			}
+		}
+	}
+}
+}
+```
+
 ## PostgreSQL
 
 ### Zadanie 1 ( EDA )

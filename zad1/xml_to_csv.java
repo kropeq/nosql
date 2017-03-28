@@ -11,8 +11,8 @@ public class xml_to_csv {
 		int opcja=-1;
 		Scanner in = new Scanner(System.in);
 		while(opcja != 0 && opcja!=1){
-			System.out.println("Wybierz jedn¹ z dwóch opcji: ");
-			System.out.println("0 - Zakoñcz");
+			System.out.println("Wybierz jednÂ¹ z dwÃ³ch opcji: ");
+			System.out.println("0 - ZakoÃ±cz");
 			System.out.println("1 - Wykonaj konwersje");
 			opcja = in.nextInt();
 			switch(opcja){
@@ -24,7 +24,7 @@ public class xml_to_csv {
 				obj.convert_xml();
 				break;
 			}
-			default: System.out.println("Z³y wybór, powtórz. \n");
+			default: System.out.println("ZÂ³y wybÃ³r, powtÃ³rz. \n");
 				break;
 			}
 		}
@@ -136,7 +136,7 @@ public class xml_to_csv {
 					commentcount = line.substring(poczatek+14,koniec-2);
 				}
 				
-				// Z³¹czenie i zapis
+				// ZÂ³Â¹czenie i zapis
 				tresc = id + ";" + viewcount + ";" + creationdate + ";" + body + ";" + title + ";" + tags + ";" + answercount + ";" + commentcount;
 				out.println(tresc);
 				title="N/A";

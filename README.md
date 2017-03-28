@@ -187,20 +187,54 @@ Plik: _training.1600000.processed.noemoticon.csv_
 
 ## Elasticsearch
 
-Mapping - przygotowac i zapisać(TODO)
+Do pomiarów czasu wykorzystuję skrypt [timecmd.bat](http://stackoverflow.com/questions/673523/how-to-measure-execution-time-of-command-in-windows-command-line)
 
-#### Utworzenie bazy tweets i ustawienie mappingu
+Operacje będę wykorzystywał do przygotowanej próbki danych( 1000 rekordów ) w formacie json.
 
-curl -XPUT localhost:9200/tweets --data-binary @tweets.mappings
+#### Przygotowałem mapping do mojej bazy
+
+[mapping](https://github.com/kropeq/nosql/blob/master/mapping.json)
+
+```
+{
+  	"tweet": {
+		"properties": {
+			"Rating": { "type": "long" },
+			"id": { "type": "long" },
+			"CreationData": { "type": "date" },
+			"Username": { "type": "text"},
+			"Tweet": { "type": "text" },
+			"Location": { "type":"geo_point" }
+		}
+	}
+}
+```
+
+#### Utworzenie indexu "tweets"
+
+```timecmd curl -XPUT localhost:9200/tweets```
+
+```0.22s```
+
+#### Ustawiamy mapping typu "tweet"
+
+```timecmd curl -XPUT localhost:9200/tweets/_mapping/tweet --data-binary @mapping.json```
+
+```0.09s```
 
 #### Import pliku z danymi
 
-curl -XPOST localhost:9200/tweets/tweet/_bulk --data-binary @tweets.json
+```timecmd curl -XPOST localhost:9200/tweets/tweet/_bulk --data-binary @tweets.json```
+
+```0.53s```
 
 #### Zliczenie zaimportowanych danych
 
-curl localhost:9200/tweets/tweet/_count
+```timecmd curl localhost:9200/tweets/tweet/_count```
 
+```"count":1000```
+
+```0.14s```
 
 
 

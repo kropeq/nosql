@@ -59,6 +59,58 @@ Przykład zapytania w PostgreSQL( 5 najaktywniejszych użytkowników ):
 
 [Plik](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&export=download) zawierający dane nie zawierał nagłówków, a opis poszczególnych kolumn znajdował się na [stronie](http://help.sentiment140.com/for-students/), z której został pobrany zbiór. Postanowiłem usunąć kolumnę 4-tą zawierającą zapytania do postów, ponieważ we wszystkisch rekordach była ta sama wartość "NO_QUERY", która nic nie wnosiła do danych. Dodatkowo postanowiłem o dodaniu lokalizacji tych tweetów wprowadzając listę współrzędnych 31 miejscowości USA i losując( programistycznie ) do każdego tweeta jedną z nich.
 
+## Zadanie GEO
+
+Ponieważ wybrany przeze mnie zbiór( tweety ) nie zawierał danych geolokalizacji, musiałem je dołączyć programistycznie. Zrobiłem to poprzez dolosowanie dla każdego tweeta geolokalizacji 1 z 31 wybranych przeze mnie miast USA. Jako, iż tych geolokalizacji jest tylko 31 dla 1 600 000 tweetów( byłoby mnóstwo znaczników w 1 miejscu ), do tego zadania postanowiłem zliczyć ilość wystąpień każdej z lokalizacji i utworzenie osobnego zbioru zawierającego dane:
+
+||Country|City|Tweets|Location|
+|---|------|---|-----------|-----|
+|typ|text|text|long|geo_point|
+
+* Country - kraj, z którego został wysłany tweet
+* City - miasto, z którego został wysłany tweet
+* Tweets - ilość tweetów wysłanych z tego miejsca
+* Location - współrzędne geograficzne
+
+[Zobacz mapkę](https://github.com/kropeq/nosql/blob/master/tweets.geojson)
+
+![alt tag](https://github.com/kropeq/nosql/blob/master/screens/mapka_geojson.png)
+
+#### Utworzenie bazy
+
+```curl -XPUT localhost:9200/geo```
+
+#### Dodanie mappingu
+
+```curl -XPUT localhost:9200/geo/_mapping/cities --data-binary @mapping_geo.json```
+
+#### Import danych
+
+```curl -XPOST localhost:9200/geo/cities/_bulk --data-binary @tweets_geo.json```
+
+#### Zapytanie 1: Miejsca tweetujących w odległości 400 kilometrów od miasta Baltimore
+
+``` curl -g -X GET "http://localhost:9200/geo/cities/_search?pretty=true" --data-binary @query1.txt```
+
+#### query1.txt:
+
+```
+{
+"query": { 
+	"bool" : { 
+		"must" : {
+			"match_all" : {} 
+			},
+		"filter" : { 
+			"geo_distance" : { 
+				"distance" : "400km", 
+				"Location": [-76.6121900,39.2903800] 
+				}
+			}
+		}
+	}
+}
+```
 
 ## PostgreSQL
 
@@ -282,22 +334,6 @@ Plik: _training.1600000.processed.noemoticon.csv_
 
 ```1 600 000```
 
-
-### Mapka
-
-##### Wstawiamy wcześniej przygotowany plik( w zadaniu 2 EDA ) _tweets.csv_ do wspólnego folderu z plikiem csv_to_geojson.class_ i z linii poleceń uruchamiamy konwersję:
-
-```java -cp źródło\pliku csv_to_geojson```
-
-W wyniku otrzymujemy plik tweets.geojson, który zawiera przygotowane dane w formacie GeoJSON.
-
-Mapa zawiera miejsca, z których wysyłane były tweety( nazwa kraju( USA ) i miasta ) oraz zliczoną liczbę tweetów wysłanych z tego miejsca.
-
-[Zobacz mapkę](https://github.com/kropeq/nosql/blob/master/tweets.geojson)
-
-![alt tag](https://github.com/kropeq/nosql/blob/master/screens/mapka_geojson.png)
-
-Zapytanie mapkowe w celu określania lokalizacji jakichś obiektów.(TODO)
 
 
 

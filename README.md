@@ -72,8 +72,6 @@ Ponieważ wybrany przeze mnie zbiór( tweety ) nie zawierał danych geolokalizac
 * Tweets - ilość tweetów wysłanych z tego miejsca
 * Location - współrzędne geograficzne
 
-[Zobacz mapkę](https://github.com/kropeq/nosql/blob/master/tweets.geojson)
-
 ![alt tag](https://github.com/kropeq/nosql/blob/master/screens/mapka_geojson.png)
 
 #### Utworzenie bazy
@@ -87,6 +85,8 @@ Ponieważ wybrany przeze mnie zbiór( tweety ) nie zawierał danych geolokalizac
 #### Import danych
 
 ```curl -XPOST localhost:9200/geo/cities/_bulk --data-binary @tweets_geo.json```
+
+### Rozwiązania w postaci mapek są dostępne pod tym linkiem: [https://kropeq.github.io/](https://kropeq.github.io/)
 
 #### Zapytanie 1: Miejsca tweetujących w odległości 400 kilometrów od miasta Baltimore
 

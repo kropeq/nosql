@@ -77,7 +77,11 @@ Dane: _[Pobierz](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&expo
 
 Plik: _training.1600000.processed.noemoticon.csv_
 
-#### Wstawiamy plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _dane_do_geo.class_ i z linii poleceń uruchamiamy konwersję:
+#### Wstawiamy plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _dane_do_geo.java_ i z linii poleceń uruchamiamy kompilację pliku java:
+
+```javac -g źrodło\pliku\dane_do_geo.java```
+
+#### Utworzy nam się w tym miejscu plik dane_do_geo.class, który jest gotowy do użycia:
 
 ```java -cp źródło\pliku\class dane_do_geo```
 
@@ -189,7 +193,11 @@ Dane: _[Pobierz](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&expo
 
 Plik: _training.1600000.processed.noemoticon.csv_
 
-##### Wstawiamy plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _edycja_csv.class_ i z linii poleceń uruchamiamy konwersję:
+##### Wstawiamy plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _edycja_csv.java_ i z linii poleceń uruchamiamy kompilację pliku java:
+
+```javac -g źrodło\pliku\edycja_csv.java```
+
+#### Utworzy nam się w tym miejscu plik edycja_csv.class, który jest gotowy do użycia::
 
 ```java -cp źródło\pliku edycja_csv```
 
@@ -311,7 +319,11 @@ Do pomiarów czasu wykorzystuję skrypt [timecmd.bat](http://stackoverflow.com/q
 
 Operacje będę wykorzystywał do przygotowanej próbki danych( 1000 rekordów ) w formacie json.
 
-#### Wstawiam plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _csv_to_json.class_ i z linii poleceń uruchamiam konwersję:
+#### Wstawiam plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _csv_to_json.java_ i z linii poleceń uruchamiam kompilację pliku java:
+
+```javac -g źrodło\pliku\csv_to_json.java```
+
+#### Utworzy nam się w tym miejscu plik csv_to_json.class, który jest gotowy do użycia::
 
 ```java -cp źródło\pliku csv_to_json```
 
@@ -378,7 +390,11 @@ Dane: _[Pobierz](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&expo
 
 Plik: _training.1600000.processed.noemoticon.csv_
 
-##### Wstawiamy plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _edycja_csv.class_ i z linii poleceń uruchamiamy konwersję:
+##### Wstawiamy plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _edycja_csv.java_ i z linii poleceń uruchamiamy kompilację pliku java:
+
+```javac -g źrodło\pliku\edycja_csv.java```
+
+#### Utworzy nam się w tym miejscu plik edycja_csv.class, który jest gotowy do użycia::
 
 ```java -cp źródło\pliku edycja_csv```
 
@@ -417,7 +433,11 @@ Dane: _[Pobierz](https://archive.org/download/stackexchange/gamedev.stackexchang
 
 Plik: _Posts.xml_
 
-##### Wstawiamy plik _Posts.xml_ do wspólnego folderu z plikiem _xml_to_csv.class_ i z linii poleceń uruchamiamy konwersję:
+##### Wstawiamy plik _Posts.xml_ do wspólnego folderu z plikiem _xml_to_csv.java_ i z linii poleceń uruchamiamy kompilację pliku java:
+
+```javac -g źrodło\pliku\xml_to_csv.java```
+
+#### Utworzy nam się w tym miejscu plik xml_to_csv.class, który jest gotowy do użycia::
 
 ```java -cp źródło\pliku xml_to_csv```
 
@@ -490,7 +510,11 @@ Dane: _[Pobierz](https://archive.org/download/stackexchange/gamedev.stackexchang
 
 Plik: _Posts.xml_
 
-##### Wstawiamy plik _Posts.xml_ do wspólnego folderu z plikiem _xml_to_csv.class_ i z linii poleceń uruchamiamy konwersję:
+##### Wstawiamy plik _Posts.xml_ do wspólnego folderu z plikiem _xml_to_csv.java_ i z linii poleceń uruchamiamy kompilację pliku java:
+
+```javac -g źrodło\pliku\xml_to_csv.java```
+
+#### Utworzy nam się w tym miejscu plik xml_to_csv.class, który jest gotowy do użycia::
 
 ```java -cp źródło\pliku xml_to_csv```
 

@@ -60,6 +60,8 @@ Przykład zapytania w PostgreSQL( 5 najaktywniejszych użytkowników ):
 
 ## Zadanie GEO
 
+### Wersja ElasticSearch 5.2.2
+
 Ponieważ wybrany przeze mnie zbiór( tweety ) nie zawierał danych geolokalizacji, musiałem je dołączyć programistycznie. Zrobiłem to poprzez dolosowanie dla każdego tweeta geolokalizacji 1 z 31 wybranych przeze mnie miast USA. Jako, iż tych geolokalizacji jest tylko 31 dla 1 600 000 tweetów( byłoby mnóstwo znaczników w 1 miejscu ), do tego zadania postanowiłem zliczyć ilość wystąpień każdej z lokalizacji i utworzenie osobnego zbioru zawierającego dane:
 
 ||Country|City|Tweets|Location|

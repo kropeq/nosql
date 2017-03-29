@@ -44,8 +44,7 @@ Przykładowy rekord:
 * CreationData - data udostępnienia tweeta
 * Username - nazwa użytkownika tweeta
 * Tweet - tekst tweeeta
-* Latitude - szerokość geograficzna
-* Longitude - długość geograficzna
+* Location - współrzędne geograficzne
 
 ### Przykładowe zapytania
 
@@ -73,6 +72,16 @@ Ponieważ wybrany przeze mnie zbiór( tweety ) nie zawierał danych geolokalizac
 * Location - współrzędne geograficzne
 
 ![alt tag](https://github.com/kropeq/nosql/blob/master/screens/mapka_geojson.png)
+
+Dane: _[Pobierz](https://docs.google.com/uc?id=0B04GJPshIjmPRnZManQwWEdTZjg&export=download)_ (Twitter Data For Sentiment Analysis)
+
+Plik: _training.1600000.processed.noemoticon.csv_
+
+#### Wstawiamy plik _training.1600000.processed.noemoticon.csv_ do wspólnego folderu z plikiem _dane_do_geo.class_ i z linii poleceń uruchamiamy konwersję:
+
+```java -cp źródło\pliku\class dane_do_geo```
+
+W wyniku otrzymujemy plik tweets_geo.json, który jest gotowy do importu do ElasticSearch.
 
 #### Utworzenie bazy
 
